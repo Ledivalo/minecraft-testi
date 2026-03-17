@@ -22,6 +22,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.emeraldmiekka.init.EmeraldMiekkaModTabs;
 import net.mcreator.emeraldmiekka.init.EmeraldMiekkaModItems;
+import net.mcreator.emeraldmiekka.init.EmeraldMiekkaModEntities;
 
 import javax.annotation.Nullable;
 
@@ -47,6 +48,7 @@ public class EmeraldMiekkaMod {
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
 		EmeraldMiekkaModItems.REGISTRY.register(modEventBus);
+		EmeraldMiekkaModEntities.REGISTRY.register(modEventBus);
 		EmeraldMiekkaModTabs.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init

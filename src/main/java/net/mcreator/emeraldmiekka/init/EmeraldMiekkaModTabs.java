@@ -22,6 +22,8 @@ public class EmeraldMiekkaModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(EmeraldMiekkaModItems.MIEKKA.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+			tabData.accept(EmeraldMiekkaModItems.OTUS_SPAWN_EGG.get());
 		}
 	}
 }
