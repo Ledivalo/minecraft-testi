@@ -1,0 +1,40 @@
+package net.mcreator.emeraldmiekka.client.renderer;
+
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
+import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+
+import net.mcreator.emeraldmiekka.entity.Otus2Entity;
+import net.mcreator.emeraldmiekka.client.model.Modelotus;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+
+public class Otus2Renderer extends MobRenderer<Otus2Entity, LivingEntityRenderState, Modelotus> {
+	private Otus2Entity entity = null;
+
+	public Otus2Renderer(EntityRendererProvider.Context context) {
+		super(context, new Modelotus(context.bakeLayer(Modelotus.LAYER_LOCATION)), 2f);
+	}
+
+	@Override
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(Otus2Entity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
+		return ResourceLocation.parse("emerald_miekka:textures/entities/otus_texture.png");
+	}
+
+	@Override
+	protected void scale(LivingEntityRenderState state, PoseStack poseStack) {
+		poseStack.scale(2.5f, 2.5f, 2.5f);
+	}
+}

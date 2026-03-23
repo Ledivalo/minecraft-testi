@@ -1,5 +1,7 @@
 {
   "item.emerald_miekka.miekka": "Miekka",
   "item.emerald_miekka.otus_spawn_egg": "Otus Spawn Egg",
-  "entity.emerald_miekka.otus": "Otus"
+  "entity.emerald_miekka.otus": "Otus",
+  "enchantment.emerald_miekka.myrkky": "Myrkky",
+  "entity.emerald_miekka.otus_2": "Otus"
 }

@@ -18,6 +18,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 
 import net.mcreator.emeraldmiekka.entity.OtusEntity;
+import net.mcreator.emeraldmiekka.entity.Otus2Entity;
 import net.mcreator.emeraldmiekka.EmeraldMiekkaMod;
 
 @EventBusSubscriber
@@ -25,6 +26,10 @@ public class EmeraldMiekkaModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, EmeraldMiekkaMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<OtusEntity>> OTUS = register("otus",
 			EntityType.Builder.<OtusEntity>of(OtusEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(2f, 2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<Otus2Entity>> OTUS_2 = register("otus_2",
+			EntityType.Builder.<Otus2Entity>of(Otus2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(2f, 2f));
 
@@ -37,10 +42,12 @@ public class EmeraldMiekkaModEntities {
 	@SubscribeEvent
 	public static void init(RegisterSpawnPlacementsEvent event) {
 		OtusEntity.init(event);
+		Otus2Entity.init(event);
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(OTUS.get(), OtusEntity.createAttributes().build());
+		event.put(OTUS_2.get(), Otus2Entity.createAttributes().build());
 	}
 }

@@ -9,11 +9,13 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.emeraldmiekka.client.renderer.OtusRenderer;
+import net.mcreator.emeraldmiekka.client.renderer.Otus2Renderer;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class EmeraldMiekkaModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(EmeraldMiekkaModEntities.OTUS.get(), OtusRenderer::new);
+		event.registerEntityRenderer(EmeraldMiekkaModEntities.OTUS_2.get(), Otus2Renderer::new);
 	}
 }
