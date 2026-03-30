@@ -1,0 +1,197 @@
+{
+  "mod_elements": [
+    {
+      "name": "Miekka",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miekka",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/emerald_miekka/models/item/miekka.json",
+          "src/main/java/net/mcreator/emeraldmiekka/item/MiekkaItem.java",
+          "src/main/resources/assets/emerald_miekka/items/miekka.json"
+        ]
+      }
+    },
+    {
+      "name": "Miekkaresepti",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miekkaresepti",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/emerald_miekka/recipe/miekkaresepti.json",
+          "src/main/resources/data/emerald_miekka/advancement/recipes/miekkaresepti.json"
+        ]
+      }
+    },
+    {
+      "name": "Otus",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "otus",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/emerald_miekka/items/otus_spawn_egg.json",
+          "src/main/java/net/mcreator/emeraldmiekka/client/renderer/OtusRenderer.java",
+          "src/main/resources/assets/emerald_miekka/models/item/otus_spawn_egg.json",
+          "src/main/resources/data/emerald_miekka/neoforge/biome_modifier/otus_biome_modifier.json",
+          "src/main/java/net/mcreator/emeraldmiekka/entity/OtusEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "Myrkky",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "myrkky",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/emerald_miekka/enchantment/myrkky.json"
+        ]
+      }
+    },
+    {
+      "name": "Myrkkykoodi",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "myrkkykoodi",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/emeraldmiekka/procedures/MyrkkykoodiProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Otus2",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "otus_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/emerald_miekka/neoforge/biome_modifier/otus_2_biome_modifier.json",
+          "src/main/java/net/mcreator/emeraldmiekka/client/renderer/Otus2Renderer.java",
+          "src/main/java/net/mcreator/emeraldmiekka/entity/Otus2Entity.java",
+          "src/main/resources/assets/emerald_miekka/items/otus_2_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "Otuskoodi",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "otuskoodi",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/emeraldmiekka/procedures/OtuskoodiProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Talo",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "talo",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/emerald_miekka/worldgen/structure/talo.json",
+          "src/main/resources/data/emerald_miekka/worldgen/template_pool/talo.json",
+          "src/main/resources/data/emerald_miekka/worldgen/structure_set/talo.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:Miekka"
+    ],
+    "ITEMS:emerald_miekka:miekka_repair_items": [
+      "~Items.EMERALD"
+    ],
+    "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:Myrkky"
+    ],
+    "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:Myrkky"
+    ],
+    "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:Myrkky"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.emerald_miekka.miekka": "Miekka",
+      "item.emerald_miekka.otus_spawn_egg": "Otus Spawn Egg",
+      "entity.emerald_miekka.otus": "Otus",
+      "enchantment.emerald_miekka.myrkky": "Myrkky",
+      "entity.emerald_miekka.otus_2": "Otus"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/mcreator/emeraldmiekka/init/EmeraldMiekkaModItems.java",
+      "src/main/java/net/mcreator/emeraldmiekka/init/EmeraldMiekkaModEntityRenderers.java",
+      "src/main/java/net/mcreator/emeraldmiekka/init/EmeraldMiekkaModEntities.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/emeraldmiekka/init/EmeraldMiekkaModModels.java",
+      "src/main/java/net/mcreator/emeraldmiekka/EmeraldMiekkaMod.java",
+      "src/main/java/net/mcreator/emeraldmiekka/init/EmeraldMiekkaModTabs.java",
+      "src/main/resources/pack.mcmeta"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "emerald_miekka",
+    "modName": "Emerald miekka",
+    "version": "1.0.0",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.8",
+    "modElementsPackage": "net.mcreator.emeraldmiekka"
+  },
+  "mcreatorVersion": 202500345720
+}

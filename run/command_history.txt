@@ -1,0 +1,3 @@
+/give @p minecraft:structure_block
+/locate structure emerald_miekka:talo
+/tp @s -448 ~ 1024
